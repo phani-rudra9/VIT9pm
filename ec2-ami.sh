@@ -1,5 +1,5 @@
 #!/bin/bash
-instance_id=`(aws ec2 describe-instances --filters "Name=tag:created_by,Values=nani" | grep -i "instanceid" | cut -d ":" -f 2 | cut -d "," -f 1 | tr -d '"')`
+instance_id=`(aws ec2 describe-instances --filters "Name=tag:created_by,Values=naniphani" | grep -i "instanceid" | cut -d ":" -f 2 | cut -d "," -f 1 | tr -d '"')`
 if [ -z $instance_id ]
 then
  echo "There is no instance_id with the given tags please check proper tags........." && aws sns publish --topic-arn "arn:aws:sns:us-east-2:971076122335:sample-8pm" --message "There is no instance_id with the given tags please check proper tags and trigger the build"  && exit1;
