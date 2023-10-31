@@ -6,5 +6,5 @@ then
 else
 echo "The instance id for given Tag is: $instance_id"
 echo "Creating AMI for $instance_id........"
-aws ec2 create-image --instance-id $instance_id --name "My-jenkins-server-Backup-$Build_Number" --description "An AMI for my jenkins server server" --no-reboot
+aws ec2 create-image --instance-id $instance_id --name "My-jenkins-server-Backup-31oct" --description "An AMI for my jenkins server server" --no-reboot
 fi
